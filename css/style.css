@@ -1,0 +1,347 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: #fef8ec;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // -webkit-box-shadow:0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #3eb5de;
+  text-align: center;
+  color: #0A3C4D;
+  font-weight: bold;
+  padding-top: 5px;
+  font-size: 16px;
+  -webkit-app-region: drag;
+}
+  #head #control-button {
+    position: fixed;
+    top: 2px;
+    right: 4px;
+  }
+    #head #control-button .control {
+      background: #369ec2;
+      color: #fff;
+      padding: 0 5px;
+      cursor: default;
+      font-size: 12px;
+      border: 0;
+      border-bottom: 2px solid #2485a7;
+      -webkit-app-region: no-drag;
+    }
+    #head #control-button .control:hover {
+      background: #2485a7;
+      border-bottom: 2px solid #0A3C4D;
+    }
+  #head #menu-button {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 3px;
+    width: 30px;
+    height: 30px;
+    background: #369ec2;
+    -webkit-app-region: no-drag;
+  }
+  #head #menu-button:hover {
+    background: #2485a7;
+  }
+
+#add-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  padding-top: 30px;
+  width: 100%;
+  background: #ecf2fe;
+  border-bottom: 3px solid #2593b9;
+  font-weight: bold;
+  display: none;
+}
+  #add-form .button {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #e6f7fd;
+    width: 60px;
+    height: auto;
+    font-size: 11px;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 2px 3px;
+    border: 0;
+    background: #03b2ee;
+    border-bottom: 1px solid #0478a1;
+    cursor: default;
+  }
+  #add-form .button:hover {
+    color: #fff;
+    background: #19c0fa;
+    border-bottom: 1px solid #0f8fbc;
+  }
+  #add-form .form-title {
+    background: #04a7e0;
+    color: #daf5ff;
+    font-size: 12px;
+    text-align: center;
+    padding: 4px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: default;
+  }
+  #add-form .form-title:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(3, 46, 61, 0.4);
+    top: 0;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+  }
+  #add-form .form-close {
+    font-size: 18px;
+    float: right;
+    background: #00bdf3;
+    color: #011d27;
+    padding: 0px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: default;
+  }
+  #add-form .form-close:hover {
+    background: #1bc9fb;
+    color: #025b7a;
+  }
+  #add-form input {
+    background: #fcfdfd;
+    font-size: 11px;
+    border: 0;
+    padding: 5px;
+    border-bottom: 1px solid #9ce1f9;
+    width: 100%;
+    color: #8c7d63;
+  }
+  #add-form input:focus, #add-form input:hover {
+    border-bottom: 1px solid #00aeeb;
+    background: #fff;
+  }
+  #add-form fieldset {
+    margin: 5px;
+  }
+  #add-form .field-program-version input {
+    width: 49%;
+  }
+  #add-form .field-program-version input.program {
+    float: left;
+  }
+  #add-form .field-program-version input.version {
+    float: right;
+  }
+  #add-form .field-location input {
+    width: 75%;
+  }
+  #add-form .field-location .button {
+    width: 60px;
+    height: auto;
+    font-size: 11px;
+    margin-left: -5px;
+    padding: 5px;
+  }
+  #add-form .field-button {
+    text-align: center;
+  }
+
+#foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 100%;
+  background: #3eb5de;
+}
+  #foot .add-button {
+    text-transform: uppercase;
+    margin: 0 auto;
+    background: #058dbd;
+    color: #e5f5fb;
+    width: 80px;
+    height: 19px;
+    font-size: 11px;
+    text-align: center;
+    padding-top: 1px;
+    margin-top: 3px;
+    border-bottom: 2px solid #044c65;
+    cursor: default;
+  }
+  #foot .add-button:hover {
+    color: #fff;
+    background: #2898bf;
+    border-bottom: 2px solid #076b8e;
+  }
+
+#bg-search-viewing {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background: #fef8ec;
+  width: 100%;
+  height: 90px;
+  z-index: -2;
+}
+
+#search-area {
+  width: 85%;
+  margin: 0 auto;
+  position: fixed;
+  top: 30px;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+#search-area:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 10px rgba(3,46,61,0.1);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+  #search-area .search-box {
+    display: block;
+    background: #fefcfa;
+    border: 0;
+    float: left;
+    width: 100%;
+    height: 27px;
+    padding: 0 10px;
+    padding-right: 40px;
+    font-size: 11px;
+    color: #8c7d63;
+    border-bottom: 2px solid #fbb83a;
+  }
+  #search-area .search-box:hover {
+    background: #fff;
+    // border-bottom: 2px solid #f99115;
+  }
+  #search-area .search-button {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 25px;
+    background: url('../images/search.png') #fbb83a;
+    border: 0;
+    margin-left: -30px;
+  }
+
+.alert-save {
+  display: none;
+  background: #ff0;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#documentations {
+  width: 100%;
+  height: 425px;
+  overflow-y: scroll;
+  background: none;
+  padding: 10px;
+  margin-top: 80px;
+  position: absolute;
+}
+  #documentations .doc-item {
+    width: 99%;
+    min-height: 60px;
+    background: #fff;
+    margin: 0 auto;
+    border-bottom: 1px solid #fce794;
+    border-left: 2px solid #f9cc16;
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    color: #898403;
+    cursor: default;
+  }
+  #documentations .doc-item:hover {
+    color: #8e5905;
+    background: #faf7a0;
+  }
+    #documentations .doc-item h3 {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    #documentations .doc-item .doc-info {
+      display: block;
+      margin: 0;
+      padding: 0;
+      margin-top: -3px;
+    }
+      #documentations .doc-item .doc-info span {
+        font-size: 11px;
+        margin: 0;
+        margin-right: 2px;
+        padding: 0;
+      }
+      #documentations .doc-item .doc-info .tag {
+        display: inline-block;
+        font-size: 10.5px;
+        color: #898403;
+        margin-right: 5px;
+        padding: 1px 3px;
+        background: #fbe953;
+        border-bottom: 2px solid #f2db1c;
+      }
+      #documentations .doc-item .doc-info .tag:hover {
+        color: #695202;
+        background: #fdd724;
+        border-bottom: 2px solid #fcbe02;
+      }
+
+#viewing {
+  z-index: -99999;
+}
+
+/*::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #f4b905;
+  border-left: 1px solid #f4a701;
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+}*/

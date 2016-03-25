@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DocQ - My Documentation Organizer</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/border.css">
+  <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+  <div id="top"></div>
+  <div id="bottom"></div>
+  <div id="right"></div>
+  <div id="left"></div>
+
+  </div>
+
+  </div>
+
+  <div id="head">
+    <span id="menu-button">
+      <img src="./images/menu.png">
+    </span>
+    DocQ
+
+    <div id="control-button">
+      <span class="control minimizes">&minus;</span>
+      <span class="control closes">&times;</span>
+    </div>
+  </div>
+
+  <div id="bg-search-viewing"></div>
+
+  <div id="search-area">
+    <input type="text" class="search-box" placeholder="Search a documentation ....">
+    <button class="search-button"></button>
+  </div>
+
+  <!-- <div id="viewing">
+    You are viewing: <span></span>
+  </div> -->
+
+  <div id="documentations"></div>
+
+  <form id="add-form">
+    <div class="form-close">&times;</div>
+    <div class="form-title">
+      Add a Documentation
+    </div>
+
+    <fieldset>
+      <input class="title" type="text" name="title" placeholder="Title">
+    </fieldset>
+
+    <fieldset class="field-program-version">
+      <input class="program" type="text" name="program" placeholder="Program">
+      <input class="version" type="text" name="version" placeholder="Version">
+    </fieldset>
+
+    <fieldset class="field-location">
+      <input class="location" type="text" name="location" placeholder="Location">
+      <span class="button browse">Browse</span>
+    </fieldset>
+
+    <fieldset>
+      <input class="tags" type="text" name="tags" placeholder="Tags (separated by comma)">
+    </fieldset>
+
+    <fieldset class="field-button">
+      <span class="button submit">Save</span>
+      <span class="button cancel">Cancel</span>
+    </fieldset>
+  </form>
+
+  <div id="foot">
+    <div class="add-button">Add New</div>
+  </div>
+
+  <span class="alert-save">
+    <strong>Success!</strong> A documentation has been added.<br>
+  </span>
+
+  <script>window.$ = window.jQuery = require('./js/jquery.min.js');</script>
+  <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script>
+  (function($){
+    $(window).load(function(){
+      $("body").mCustomScrollbar({
+        theme : 'minimal'
+      });
+    });
+  })(jQuery);
+  </script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/process.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
